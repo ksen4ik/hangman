@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.lock {
+  overflow-y: hidden;
+}
+
+.gallows {
+  margin: 0 auto;
+  padding: 50px 16px;
+  width: 100%;
+  max-width: 1280px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.gallows > .gallows__title {
+  display: none;
+}
+
+.loser,
+.winner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.loser__content,
+.winner__content {
+  padding: 50px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.reload {
+  padding: 12px 24px;
+  background: #9999c2;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.section-hidden {
+  display: none;
+}
+
+.man-part {
+  display: none;
+}
+
+.gallows__game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.gallows__title {
+  font-size: 48px;
+  text-align: center;
+}
+
+.loser__title,
+.winner__title {
+  font-size: 40px;
+  text-align: center;
+}
+
+.loser__answer,
+.winner__answer {
+  font-size: 24px;
+  text-align: center;
+}
+
+.gallows__question {
+  font-size: 32px;
+  text-align: center;
+}
+
+.gallows__answer {
+  display: flex;
+  gap: 10px;
+}
+
+.answer__letter {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.gallows__guess {
+  display: flex;
+  gap: 10px;
+}
+
+.gallows__guess-text,
+.gallows__guess-counter {
+  font-size: 24px;
+}
+
+.gallows__guess-counter {
+  color: #ff0000;
+}
+
+.gallows__keyboard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.gallows__keyboard-row {
+  display: flex;
+  gap: 5px;
+}
+
+.keyboard-item,
+.key-true,
+.key-false {
+  min-width: 50px;
+  max-width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #9999c2;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.key-true {
+  background: #00ff00;
+  cursor: default;
+}
+
+.key-false {
+  background: #ff0000;
+  cursor: default;
+}
+
+@media screen and (max-width: 1023px) {
+  .gallows {
+    padding: 24px 16px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .gallows__image svg {
+    height: 400px;
+  }
+  .gallows__game {
+    gap: 30px;
+  }
+  .gallows__game .gallows__title {
+    display: none;
+  }
+  .gallows > .gallows__title {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+ .gallows {
+    gap: 24px;
+  } 
+  .gallows__image svg {
+    max-height: 300px;
+  }
+  .gallows__game {
+    gap: 16px;
+  }
+  .gallows__title {
+    font-size: 40px;
+  }
+  .gallows__question {
+    font-size: 24px;
+  }
+  .gallows__guess-text,
+  .gallows__guess-counter,
+  .loser__answer,
+  .winner__answer {
+    font-size: 20px;
+  }
+  .keyboard-item,
+  .key-true,
+  .key-false {
+    min-width: 35px;
+    max-width: 35px;
+    height: 35px;
+  }
+  .loser__content,
+  .winner__content {
+    padding: 24px;
+    max-width: 450px;
+    gap: 24px;
+  }
+  .loser__title,
+  .winner__title {
+    font-size: 28px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .gallows__image {
+    width: 80%;
+  }
+  .gallows__image svg {
+    width: 100%;
+  }
+  .gallows__title {
+    font-size: 30px;
+  }
+  .keyboard-item,
+  .key-true,
+  .key-false {
+    min-width: 22px;
+    max-width: 22px;
+    height: 22px;
+  }
+  .loser__content,
+  .winner__content {
+    max-width: 300px;
+  }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .keyboard-item:hover,
+  .keyboard-item:hover,
+  .reload:hover {
+    background: #56568b;
+    color: #ffffff;
+  }
+}
